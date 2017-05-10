@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Broszhu/learn-gulp/issues"
   },
-  "homepage": "https://github.com/Broszhu/learn-gulp#readme"
+  "homepage": "https://github.com/Broszhu/learn-gulp#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
 }

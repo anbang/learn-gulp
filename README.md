@@ -86,9 +86,66 @@ gulp的使用流程一般是
 
     $ gulp hello
 
-好了，如果执行成功，那么你已经完成gulp的hello word了；下面看些入门的东西（如果这部分你搞不定，可以看[gulp运行教程](https://translate.google.cn/) 进行研究下）；
+好了，如果执行成功，那么你已经完成gulp的hello word了；
+
+注意gulp 后面的hello 是任务名；如果您的任务名字是default,那么你在命令行里输入 gulp即可；当省略任务名的时候；默认会运行 gulp default；
+
+**依赖任务的写法**
+
+    gulp.task('default',['watch'],function() {
+        console.log('执行完watch任务后，这里的代码才会执行');
+    });
+
+这里的task有3个参数
+
+default是方法名称，只有default比较奇怪，会默认调用。相当于c里的main方法
+
+['watch']这是依赖的作业列表，它们是由顺序的，按数组顺序依次执行 第三个参数是成功执行完上面的依赖作业后执行的回调函数
+
+这里要强调，依赖作业数组里的都执行完了，才会执行第三个参数，即当前作业具体内容
+
+我们不妨改一下，看看多个依赖如何定义
+
+    gulp.task('default',['watch','task_2','task_3'],function() {
+        console.log("执行完 'watch','task_2','task_3' 后，我才会被执行；");
+    });
+
+下面看些入门的东西（如果这部分你搞不定，可以看[gulp运行教程](https://translate.google.cn/) 进行研究下）；
 
 感兴趣的可以看看 [gulp和grunt哪个好？有什么区别？]() 和 [为什么选择Gulp]()
+
+上面写的都是基础的语法，看看生产代码怎么写；
+
+项目中 混淆压缩js是常见的需求，使用gulp-uglify插件；
+
+    var gulp = require('gulp');
+    var uglify = require('gulp-uglify');
+
+    gulp.task('default', function() {
+        gulp.src('src/*.js')
+            .pipe(uglify())   //压缩js
+            .pipe(gulp.dest('dist'))
+    });
+
+**src是输入**，**dest是输出**；
+
+pipe是管道的意思，也是stream里核心概念，也就是说：上一个的输出，是下一个的输入。
+
+src里所有js，经过处理1，处理2，然后压缩变成min.js,中间的处理pipe可以1步，也可以是n步；
+
+反正第一步处理的结果是第二步的输入，以此类推，就像生产线一样，每一步都是一个task；
+
+现在再看上面的那张图片，是不是恍然大悟的感觉？开始是指定好的（src），结束是指定好的(dest);中间你可以倒腾N词pipe（只要你需要）；
+
+每个独立操作单元都是一个task，使用pipe来组装tasks
+
+**小结**
+
+- 1）每一个作业都是独立，定义为task
+- 2）通过stream的机制，上一个的输出，作为下一个的输入
+- 3）通过pipe方法组装task，完成我们想要的业务逻辑
+
+至此，task相关的概念都讲完了，你已经会使用gulp了，找几个插件就足以工作了；但是我们需要更深刻的了解gulp，那么我们还需要一点点的去分析；
 
 ### gulp核心API
 
@@ -365,8 +422,12 @@ gulp提供了一些很实用的接口，但本身并不能做太多的事情 可
 - 实时预览 gulp-connect
 
 
-###### 资源
+###### 参考：
+
+https://github.com/gulpjs/gulp
 
 https://zhongsp.gitbooks.io/typescript-handbook/content/doc/handbook/tutorials/Gulp.html
 
 http://i5ting.github.io/stuq-gulp/
+
+https://github.com/weui/weui
