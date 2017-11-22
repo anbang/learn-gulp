@@ -1,0 +1,10 @@
+.dia-bind-device .wui-form-group-con{ padding: 10px 20px}
+
+.dia-bind-device .bind-button-s{float: right;padding: 0 5px;}
+.dia-bind-device .bind-wui-form-item{margin-left: 15px; }
+.dia-bind-device .bind-device{line-height: 15px; border: 1px #c1c1c1 solid; padding: 5px; overflow: auto; font-family: Arial; font-size: 12px; min-height: 22px; max-height: 200px; overflow-y: auto; border-radius: 3px;}
+.dia-bind-device .bind-device li{display: inline-block; text-align: center; text-decoration: none; vertical-align: middle; cursor: pointer; font-family: inherit; border-radius: 3px; padding-left: 3px; padding-right: 3px; color: #777; border: 1px solid #cfcfcf; background-color: #f3f3f3; margin-bottom: 5px;}
+.dia-bind-device .bind-device li a{color: #999;}
+.dia-bind-device .bind-device li a:hover{color: #000;}
+.dia-bind-device .bind-device .wui-checkbox{display: none;}
+.dia-device-name{ width: 581px;}

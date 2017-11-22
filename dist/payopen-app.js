@@ -1,0 +1,1 @@
+define(function(require,exports,module){"require:nomunge,exports:nomunge,module:nomunge";var n=$("#page-payopen-apps");({init:function(){this.bind(),this.formValidate()},bind:function(){n.on("click",".j-add-app",function(n){n.preventDefault()})},formValidate:function(){}}).init()});

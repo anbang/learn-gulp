@@ -1,0 +1,36 @@
+/*dialog-有用户的样式*/
+.shakemoney-block-user-alone-module{width: 700px;}
+.shakemoney-block-user-alone-module .fieldset-style{padding: 20px;}
+.shakemoney-block-user-alone-module .block-textarea{width: 350px;}
+.shakemoney-block-user-alone-module .module-user-imges{width:20px;height:20px;border-radius:50%;}
+.shakemoney-block-user-alone-module .module-user-name{position: relative;bottom: 5px;}
+
+
+.shakemoney-money-device-shake-detail {width: 1000px;}
+.shakemoney-money-device-shake-detail .fieldset-style{padding: 20px;}
+.shakemoney-money-device-shake-detail .block-textarea-wrap{margin-top: 40px;}
+.shakemoney-money-device-shake-detail .block-textarea{width: 550px;}
+.shakemoney-money-device-shake-detail .select-all-user{width: 500px;height: 14px;margin-bottom: 20px;}
+.shakemoney-money-device-shake-detail .select-all-user #select-all{position: relative;top:2px;}
+.shakemoney-money-device-shake-detail .user-select-panel{overflow-y: scroll;max-height: 300px;width: 960px;}
+.shakemoney-money-device-shake-detail .user-item{width: 170px;display: inline-block;border-bottom: 1px dotted #d5d5d5;white-space:nowrap;}
+.shakemoney-money-device-shake-detail .block-user-input{ position: relative;margin-right: 5px;}
+.shakemoney-money-device-shake-detail .shake-monery-user-avatar{ position: relative;top: 5px;}
+.shakemoney-money-device-shake-detail .agent-imges{ height: 25px;width: 25px;border-radius: 50%;}
+.shakemoney-money-device-shake-detail .block-user-wrap{ position: relative;top: -3px;}
+.shakemoney-money-device-shake-detail .block-user-name{ display: inline-block;max-width: 50px;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;position: relative;top:6px;}
+.shakemoney-money-device-shake-detail .block-user-log{ color:#808080;}
+
+
+.shakemoney-money-device-shake-detail .select-has-mask{ margin-left: 25px;}
+.shakemoney-money-device-shake-detail .input-radio{ vertical-align: middle;}
+.shakemoney-money-device-shake-detail .dia-cursor{ cursor: pointer;}
+.shakemoney-money-device-shake-detail .dia-user-wrap{ overflow-y: scroll;max-height: 500px;width: 960px;}
+.shakemoney-money-device-shake-detail .wui-table .wui-list .item-hidden { display: none;}
+.shakemoney-money-device-shake-detail .wui-table .wui-list .item-inline-block { display: inline-block;}
+
+
+
+
+
+
