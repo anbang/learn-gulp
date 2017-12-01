@@ -34,7 +34,7 @@ gulp.task('mini-js', function () {
 
 //压缩CSS
 gulp.task('minify-css', function () {
-    gulp.src('css/*.css')
+    gulp.src('css/**/*.css')
         .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('mini-css'));
 });
